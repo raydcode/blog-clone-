@@ -1,2 +1,5 @@
-# 100days_of_Javascript_Template
-Ready to Rage , ......... 
+# Blog clone with smooth scrolling
+
+
+
+# Live-Demo :https://raydcode.github.io/blog-clone-/
