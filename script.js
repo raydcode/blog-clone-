@@ -39,9 +39,31 @@ const navList = document.querySelector('.nav-list');
 
 navList.addEventListener('click', (e) => {
   const navLink = e.target.parentElement;
-
   if (navLink.classList.contains('link')) {
     navList.querySelector('.active').classList.remove('active');
     navLink.classList.add('active');
   }
 });
+
+const backToTop = document.querySelector('.top');
+
+const rootElement = document.documentElement;
+
+document.addEventListener('scroll', showBacktoTop);
+
+function showBacktoTop() {
+  const scrollHeight = rootElement.scrollHeight - rootElement.clientHeight;
+  if (rootElement.scrollTop / scrollHeight > 0.2) {
+    backToTop.classList.add('show-btn');
+  } else {
+    backToTop.classList.remove('show-btn');
+  }
+}
+
+const scrollTop = () => {
+  rootElement.scrollTo({
+    top: 0,
+  });
+};
+
+backToTop.addEventListener('click', scrollTop);
