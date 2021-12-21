@@ -127,9 +127,6 @@ section {
   position: relative;
 }
 
-.active>* {
-  color: var(--color-primary);
-}
 
 .active::before {
   position: absolute;
@@ -138,6 +135,52 @@ section {
   bottom: -5px;
   height: 2px;
   width: 100%;
-  background-color: #900000;
+  background-color: #ffffff;
+}
 
+/* 
+Back top Top
+*/
+
+.top {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  background-color: var(--light-blue);
+  color: #fff;
+  padding: 0.8rem;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  font-size: 2rem;
+  z-index: 111;
+  transform: translateY(10rem);
+  opacity: 0;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+
+.show-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.scroll-indicator {
+  width: 100%;
+  height: 3px;
+  position: fixed;
+  background-color: var(--light-blue);
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  visibility: hidden;
+
+}
+
+.progress {
+  width: 0%;
+  height: 3px;
+  background-color: var(--white);
 }
